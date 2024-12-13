@@ -4,6 +4,7 @@ import ClientCard from "../../components/quotes/client-card";
 import QuoteInfo from "../../components/quotes/quote-info";
 import Requestor from "../../components/quotes/requestor";
 import StatusTag from "../../components/quotes/status-tag";
+import ItemsTable from "../../components/quotes/items-table";
 
 function QuoteDetails() {
 	const params = useParams()
@@ -51,8 +52,8 @@ function QuoteDetails() {
 				<div className="border border-grey-8 rounded-[10px] shadow-container-shadow my-6">
 					<h2 className="text-grey-800 tracking-[-2%] text-heading-6 font-bold py-4 px-6">Item(s)</h2>
 					<div className="flex flex-col px-4 pb-6">
-						<div>
-							{/* Table */}
+						<div className="mt-4">
+							<ItemsTable/>
 						</div>
 						<div className="mt-6 self-end w-full max-w-[190px]">
 							<div className="flex justify-between gap-4 mb-4 w-full">

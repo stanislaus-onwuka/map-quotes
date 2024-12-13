@@ -14,7 +14,7 @@ function DashboardLayout() {
 
 	return (
 		<main>
-			<aside className="bg-sidebar-bg py-6 w-full max-w-[272px] fixed top-0 flex flex-col justify-between min-h-screen">
+			<aside className="bg-sidebar-bg py-6 w-full max-w-[272px] fixed top-0 flex flex-col justify-between h-screen overflow-y-scroll">
 				<div>
 					<div className="px-6 py-2 my-3">
 						<img src="/assets/svgs/logo.svg" alt="MAP Logo" />

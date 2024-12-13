@@ -1,5 +1,6 @@
 import {  useState } from "react";
 import QuoteField from "../quote-field";
+import EditItemsTable from "../../edit-items-table";
 
 function RequestQuote() {
 	const [note, setNote] = useState<string>("");
@@ -30,8 +31,10 @@ function RequestQuote() {
 				</div>
 				<div className="border-t border-b border-[#E9E9E9] pt-4">
 					<div className="flex flex-col">
-						<h2 className=" text-paragraph-medium">Add Items</h2>
-						{/* Table */}
+						<h2 className="text-paragraph-medium font-bold mb-2">Add Items</h2>
+						<div>
+							<EditItemsTable/>
+						</div>
 						<hr className="w-full bg-[#E7E9EE] h-[1px] mt-8 mb-4" />
 						<div className="flex justify-between gap-4 w-full self-end max-w-[200px]">
 							<h3 className="text-grey-600 text-paragraph-medium">Sub Total</h3>
