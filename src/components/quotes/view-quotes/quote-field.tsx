@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { classNames } from "../../../utils/classnames";
 
 interface QuoteFieldProps {
 	title: string;
@@ -24,11 +23,11 @@ const QuoteField = ({
 		<div>
 			<label className="mb-1 text-paragraph-small text-grey-600 font-bold">{title}</label>
 			<div
-				className={classNames(
-					"flex gap-2 items-center px-3 py-[10px] border border-grey-300 rounded-md text-grey-400",
-					disabled ? "bg-grey-100" : "bg-transparent",
-					className
-				)}
+				className={`
+					"flex gap-2 items-center px-3 py-[10px] border border-grey-300 rounded-md text-grey-400"
+					${disabled ? "bg-grey-100" : "bg-transparent"}
+					${className}
+				`}
 			>
 				{leftIcon ? <div>{leftIcon}</div> : null}
 				<input value={value} className="w-full text-paragraph-small" disabled={disabled} />
