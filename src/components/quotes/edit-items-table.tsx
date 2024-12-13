@@ -102,33 +102,33 @@ const ProductField = ({ value, rightIcon, leftIcon, disabled = false, className 
 const ProductRow = ({ product }: ProductRowProps) => {
 	return (
 		<tr className="pb-4">
-			<td className="pr-4">
+			<td className="pr-4 pb-4">
 				<ProductDropdown
 					defaultValue={product.name}
 					options={[{ value: `${product.name}`, label: `${product.name}` }]}
 					disabled
 				/>
 			</td>
-			<td className="pr-4">
+			<td className="pr-4 pb-4">
 				<ProductDropdown
 					defaultValue={product.variant}
 					options={[{ value: `${product.variant}`, label: `${product.variant}` }]}
 				/>
 			</td>
-			<td className="pr-4 max-w-[135px]">
+			<td className="pr-4 max-w-[135px] pb-4">
 				<ProductField
 					value={String(product.quantity)}
 					rightIcon={<h3 className="px-2 py-1 pr-[18px] bg-sidebar-bg rounded text-grey-500">Pack</h3>}
 				/>
 			</td>
-			<td className="pr-4 max-w-[135px]">
+			<td className="pr-4 max-w-[135px] pb-4">
 				<ProductField
 					value={String(product.price.toFixed(2))}
 					leftIcon={<img src="/assets/svgs/dollar-sign.svg" alt="Dollar" />}
 					className="!py-2 !px-3"
 				/>
 			</td>
-			<td className="pr-4 max-w-[135px]">
+			<td className="pr-4 max-w-[135px] pb-4">
 				<ProductField
 					value={product.deliveryDate}
 					leftIcon={<img src="/assets/svgs/quotes/calendar.svg" alt="Calendar" />}
@@ -148,8 +148,8 @@ const ProductRow = ({ product }: ProductRowProps) => {
 const EditItemsTable = () => {
 	return (
 		<table className="min-w-full">
-			<thead className="bg-sidebar-bg">
-				<tr>
+			<thead className="pb-4 mb-4">
+				<tr className="bg-sidebar-bg">
 					{productTableHeaders.map((header, idx) => (
 						<th
 							className="px-3 py-2 text-left overflow-ellipsis max-w-[126px] whitespace-nowrap text-paragraph-small overflow-hidden font-medium text-grey-500 first:px-2"
