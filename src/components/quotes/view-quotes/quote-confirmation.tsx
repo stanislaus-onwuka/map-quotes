@@ -16,6 +16,7 @@ function QuoteConfirmation({confirmQuote, setConfirmQuote}:QuoteConfirmationProp
 
 	const closeConfirmation = () => {
 		setShowSuccess(false)
+		setConfirmQuote(false)
 	}
 
 	useEffect(() => {
@@ -29,8 +30,9 @@ function QuoteConfirmation({confirmQuote, setConfirmQuote}:QuoteConfirmationProp
 		}
 		return () => clearTimeout(timer);
 	}, [isLoading]);
-    
 
+
+    
 	const Toast = () => {
 		return (
 			<div className="flex justify-between border-l-[6px] border-l-base-green rounded px-4 py-3 w-full max-w-[390px] fixed top-2 right-2 z-10 bg-white shadow-toast-shadow">
@@ -45,12 +47,12 @@ function QuoteConfirmation({confirmQuote, setConfirmQuote}:QuoteConfirmationProp
 				</button>
 			</div>
 		);
-    };
+	};
+	
     
     if (showSuccess) {
         return <Toast/>
     }
-
 
 	if (isLoading) {
 		return (
